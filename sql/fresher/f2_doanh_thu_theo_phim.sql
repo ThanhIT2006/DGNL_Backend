@@ -1,0 +1,2 @@
+-- F2. Doanh thu theo phim (xem đề). Viết MỘT câu SELECT bên dưới, kết thúc bằng dấu ;
+SELECT title, so_ve, doanh_thu FROM ( SELECT m.title, COUNT(b.id) AS so_ve, SUM(b.total_amount) AS doanh_thu FROM movies m LEFT JOIN bookings b ON m.id = b.movie_id AND b.is_confirmed = 1 GROUP BY m.id, m.title) AS doanh_thu_theo_phim ORDER BY doanh_thu DESC, title ASC;

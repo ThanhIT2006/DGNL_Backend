@@ -1,0 +1,2 @@
+-- I2. Suất chiếu ngày 05/12/2026 còn từ 20 ghế (xem đề). Viết MỘT câu SELECT bên dưới, kết thúc bằng dấu ;
+SELECT title, room_name, start_time, available_seats FROM screenings WHERE screening_date = '2026-12-05' AND available_seats >= 20 AND start_time >= '18:00:00' ORDER BY start_time ASC, room_name ASC;

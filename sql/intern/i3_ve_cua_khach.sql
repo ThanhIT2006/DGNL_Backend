@@ -1,0 +1,2 @@
+-- I3. Vé đã xác nhận của khách an.nguyen@example.com (xem đề). Viết MỘT câu SELECT bên dưới, kết thúc bằng dấu ;
+SELECT booking_id, title, start_time, quantity, total_amount FROM bookings WHERE email = 'an.nguyen@example.com' AND is_confirmed = 1 AND start_time ORDER BY start_time ASC;
