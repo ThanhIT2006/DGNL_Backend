@@ -28,6 +28,7 @@ CREATE TABLE showtimes (
     start_time      TIMESTAMP NOT NULL,
     price           BIGINT    NOT NULL,
     available_seats INT       NOT NULL,
+    CONSTRAINT chk_showtimes_available_seats CHECK (available_seats >= 0),
     CONSTRAINT fk_showtimes_movie FOREIGN KEY (movie_id) REFERENCES movies (id),
     CONSTRAINT fk_showtimes_room  FOREIGN KEY (room_id)  REFERENCES rooms (id)
 );
